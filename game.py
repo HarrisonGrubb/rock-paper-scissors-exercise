@@ -19,14 +19,29 @@ if user_choice not in rock_paper_scissors:
 #GENERATE COMPUTER SELECTION
 print("Generating...")
 
-computer_choice = random.choice(rock_paper_scissors)
+computer_choice =  random.choice(rock_paper_scissors)
 print('Computer choice:', computer_choice)
 
 #FIND WINNER
 
-# if computer_choice == user_choice:
-#     print("IT'S A TIE!")
-#     exit
-# elif computer_choice
+# rock > scissors, paper > rock, scissors > paper, same = tie
+user_win = 'THE USER WINS!!!'
+comp_wins = 'THE COMPUTER WINS!!!'
+
+if user_choice == computer_choice:
+    print("IT'S A TIE!!!")
+elif user_choice == 'rock' and computer_choice == 'paper':
+    print(comp_wins)
+elif user_choice == 'rock' and computer_choice == 'scissors':
+    print(user_win)
+elif user_choice == 'paper' and computer_choice == 'scissors':
+    print(comp_wins)
+elif user_choice == 'paper' and computer_choice == 'rock':
+    print(user_win)
+elif user_choice == 'scissors' and computer_choice == 'rock':
+    print(comp_wins)
+else:
+    print(user_win)
+
 
 #DISPLY FINAL OUTCOMES
