@@ -11,10 +11,7 @@ print('YOU CHOSE:', user_choice)
 
 #Validating the inputs
 
-if user_choice in ['rock', 'paper', 'scissors']:
-    print('_____________________________')
-    print('good choice, best of luck')
-else:
+if user_choice not in ['rock', 'paper', 'scissors']:
     print('_____________________________')
     print('bad choice: please pick something in the game')
     exit()    
