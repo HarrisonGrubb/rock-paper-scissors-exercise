@@ -11,10 +11,17 @@ print('YOU CHOSE:', user_choice)
 
 #Validating the inputs
 
+if user_choice in ['rock', 'paper', 'scissors']:
+    print('_____________________________')
+    print('good choice, best of luck')
+else:
+    print('_____________________________')
+    print('bad choice: please pick something in the game')
+    exit()    
 
 
 #GENERATE COMPUTER SELECTION
-
+print("Generating...")
 
 
 #FIND WINNER
