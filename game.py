@@ -2,8 +2,30 @@
 
 import random
 
+# put your functions up top before if name = main
 def my_message():
     return "Hello!"
+
+def determine_winner(u, c):
+   winners = {
+        "rock":{
+            "rock": None,
+            "paper": "paper",
+            "scissors": "rock",
+        },
+        "paper":{
+            "rock": "paper",
+            "paper": None,
+            "scissors": "scissors",
+        },
+        "scissors":{
+            "rock": "rock",
+            "paper": "scissors",
+            "scissors": None,
+        },
+    }
+
+winning_choice = winners[u][c]
 
 if __name__ == "__main__":
 # only if this script is executed from the command line do all the following
