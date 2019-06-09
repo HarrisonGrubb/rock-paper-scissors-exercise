@@ -24,6 +24,17 @@ def determine_winner(u, c):
     winning_choice = winners[u][c]
     return winning_choice #"rock"
 
+#messages to import
+
+GUI_WINDOW_TITLE = 'RPS THUNDER DOME'
+WELCOME_MESSAGE = 'PREPARE TO LOSE'
+GUI_PROMPT_MESSAGE = 'CHOSE AN OPTION IF YOU DARE'
+WIN_MESSAGE = 'YOU WON...FOR NOW'
+LOSE_MESSAGE = 'YOU LOST...AS EXPECTED'
+TIE_MESSAGE = 'HUH?!? A TIE...HOW AWFUL'
+
+
+
 # only if this script is executed from the command-line
 if __name__ == "__main__":
 
