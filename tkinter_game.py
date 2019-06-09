@@ -4,6 +4,9 @@ import tkinter.messagebox
 from game import *
 
 
+# this gui is based off of the code from prof rosetti's course github
+#https://github.com/prof-rossetti/rock-paper-scissors-py/blob/master/app/tk_game.py
+
 window = tkinter.Tk()
 window.title(GUI_WINDOW_TITLE)
 
