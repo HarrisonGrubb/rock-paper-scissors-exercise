@@ -1,13 +1,10 @@
-# game.py
-
 import random
 
-# put your functions up top before if name = main
 def my_message():
     return "Hello!"
 
 def determine_winner(u, c):
-   winners = {
+    winners = {
         "rock":{
             "rock": None,
             "paper": "paper",
@@ -24,12 +21,12 @@ def determine_winner(u, c):
             "scissors": None,
         },
     }
+    winning_choice = winners[u][c]
+    return winning_choice #"rock"
 
-winning_choice = winners[u][c]
-
+# only if this script is executed from the command-line
 if __name__ == "__main__":
-# only if this script is executed from the command line do all the following
-# must indent everything below this to run it
+
     print("Rock, Paper, Scissors, Shoot!") # this is also a comment
 
     # CAPTURE INPUTS
@@ -63,25 +60,8 @@ if __name__ == "__main__":
     # same selections is a tie
     #
     # first attribute represents the user, second represents the computer
-    winners = {
-        "rock":{
-            "rock": None,
-            "paper": "paper",
-            "scissors": "rock",
-        },
-        "paper":{
-            "rock": "paper",
-            "paper": None,
-            "scissors": "scissors",
-        },
-        "scissors":{
-            "rock": "rock",
-            "paper": "scissors",
-            "scissors": None,
-        },
-    }
 
-    winning_choice = winners[user_choice][computer_choice]
+    winning_choice = determine_winner(user_choice, computer_choice)
 
     # DISPLAY FINAL OUTPUTS / OUTCOMES
 
