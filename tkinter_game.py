@@ -7,37 +7,36 @@ from game import *
 window = tkinter.Tk()
 window.title(GUI_WINDOW_TITLE)
 
-my_message = tkinter.Message(text= WELCOME_MESSAGE, width = 2000)
+my_message = tkinter.Message(text= WELCOME_MESSAGE, width = 6000)
 
 my_select_label = tkinter.Label(text = GUI_PROMPT_MESSAGE)
 my_select = tkinter.Listbox()
 my_select.insert(1, "rock")
 my_select.insert(2, 'paper')
 my_select.insert(3, 'scissors')
-my_select.insert(4, 'lizard spock')
 
 def handle_button_click():
     user_choice = my_select.get(my_select.curselection())
     computer_choice = random_choice()
     winning_choice = determine_winner(user_choice, computer_choice)
 
-    message = "||||||||||||||||||||||"
+    message = "______________________________"
     message += f"\nYou chose: {user_choice}"
     message += f"\nThe computer chose {computer_choice}"
-    message += "\n||||||||||||||||||||||"
+    message += "\n______________________________"
 
     if winning_choice:
         if winning_choice == user_choice:
             message += f"\n {WIN_MESSAGE}"
         elif winning_choice == computer_choice:
             message += f"\n {LOSE_MESSAGE}"
-        else:
-            message += f"\n {TIE_MESSAGE}"
+    else:
+        message += f"\n {TIE_MESSAGE}"
         
-    message += "\n||||||||||||||||||||||"
+    message += "\n______________________________"
     message += "\n CARE TO WAGER AGAIN...."
 
-    tkinter.messagebox("Results...", message)
+    tkinter.messagebox.showinfo("Results...", message)
 
 my_button = tkinter.Button(text = 'Submit', command = handle_button_click)
 

@@ -24,6 +24,9 @@ def determine_winner(u, c):
     winning_choice = winners[u][c]
     return winning_choice #"rock"
 
+def random_choice (options = ['rock', 'paper', 'scissors']):
+    return random.choice(options)
+
 #messages to import
 
 GUI_WINDOW_TITLE = 'RPS THUNDER DOME'
@@ -57,7 +60,7 @@ if __name__ == "__main__":
 
     # GENERATE COMPUTER SELECTION
 
-    computer_choice = random.choice(options)
+    computer_choice = random_choice()
 
     print("--------------")
     print("GENERATING...")
